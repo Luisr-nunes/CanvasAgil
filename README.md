@@ -1,121 +1,68 @@
-<div align="center">
+# Canvas Ágil
 
-# 🗂️ Canvas Ágil
+[Read in English](README.en.md)
 
-### Template de App Mobile — Exportado do Figma Make
+Protótipo de app mobile para professores montarem o planejamento de uma aula em cerca de 10 minutos, com um canvas estruturado e sugestões de um copiloto de IA. Front-end exportado do Figma Make em React e TypeScript.
 
-<br>
+## Sobre
 
-![TypeScript](https://img.shields.io/badge/TypeScript-84.5%25-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS-15.4%25-1572B6?style=flat-square&logo=css3&logoColor=white)
-![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Vite](https://img.shields.io/badge/Vite-build-646CFF?style=flat-square&logo=vite&logoColor=white)
+O Canvas Ágil organiza o plano de aula em blocos (faísca inicial, metodologia, verificação e plano B para quando a internet cair) e oferece sugestões prontas para cada bloco. Este repositório guarda o front-end gerado a partir do protótipo no Figma Make, mantido como referência visual e base para reaproveitar componentes em outros projetos. Não há back-end: os dados das telas são simulados.
 
-<br>
-
-![Tipo](https://img.shields.io/badge/Tipo-Template_/_Base_de_Projeto-4A4A4A?style=flat-square)
-![Origem](https://img.shields.io/badge/Origem-Figma_Make-F24E1E?style=flat-square&logo=figma&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Base_para_reuso-FFB300?style=flat-square)
-
-<br>
-
-> *Front-end de app mobile exportado do Figma Make, salvo como base reutilizável*
-> *para outros projetos. Estrutura completa com navegação e 6 telas funcionais.*
-
-</div>
-
----
-
-## Sobre o Repositório
-
-Este repositório armazena o código front-end gerado a partir de um protótipo no **Figma Make**, exportado como aplicação **React + TypeScript** para servir de base e referência em projetos futuros.
-
-O projeto simula um app mobile de planejamento ágil, com navegação por barra inferior e múltiplas telas já estruturadas e componentes prontos.
-
----
-
-## Telas Disponíveis
+## Telas
 
 | Tela | Componente | Descrição |
-|---|---|---|
-| Home | `HomeScreen` | Tela inicial com acesso a planos |
-| Canvas | `CanvasEditor` | Editor de canvas ágil |
-| Biblioteca | `LibraryScreen` | Repositório de modelos salvos |
-| Comunidade | `CommunityFeed` | Feed de compartilhamento |
-| Horários | `ScheduleManager` | Gerenciamento de agenda |
-| Perfil | `ProfileScreen` | Dados e configurações do usuário |
-
----
+| --- | --- | --- |
+| Início | `HomeScreen` | Saudação, atalho para novo planejamento e planejamentos recentes |
+| Canvas | `CanvasEditor` | Editor do plano de aula em blocos |
+| Copiloto | `AIBottomSheet` | Painel inferior com sugestões para o bloco selecionado |
+| Biblioteca | `LibraryScreen` | Planejamentos e modelos salvos |
+| Comunidade | `CommunityFeed` | Compartilhamento entre professores |
+| Horários | `ScheduleManager` | Agenda de aulas |
+| Perfil | `ProfileScreen` | Dados e preferências do usuário |
 
 ## Tecnologias
 
-| Tecnologia | Uso |
-|---|---|
-| **React 18** | Framework de interface |
-| **TypeScript** | Tipagem estática |
-| **Vite** | Bundler e servidor de desenvolvimento |
-| **Radix UI** | Componentes acessíveis (accordion, dialog, tabs, etc.) |
-| **Tailwind CSS** | Estilização utilitária |
-| **shadcn/ui** | Design system sobre Radix UI |
-| **Lucide React** | Ícones |
-| **Recharts** | Gráficos |
-
----
+- React 18 e TypeScript
+- Vite 6 com `@vitejs/plugin-react-swc`
+- Componentes shadcn/ui sobre Radix UI
+- CSS gerado pelo Tailwind CSS 4 (já compilado em `src/index.css`)
+- Lucide (ícones), Recharts, React Hook Form, Sonner
 
 ## Estrutura
 
 ```
 CanvasAgil/
-├── src/
-│   ├── App.tsx           # Roteamento entre telas
-│   ├── main.tsx          # Entry point React
-│   ├── index.css         # Estilos globais
-│   └── components/       # Componentes de cada tela
-├── index.html
-├── vite.config.ts
-└── package.json
+└── Canvas Ágil/            # aplicação
+    ├── index.html
+    ├── package.json
+    ├── vite.config.ts
+    └── src/
+        ├── App.tsx         # navegação entre telas
+        ├── components/     # telas, ui/ (shadcn) e figma/
+        ├── guidelines/
+        └── Attributions.md
 ```
 
----
+## Como executar
 
-## Como Rodar
+Pré-requisito: Node.js 18+.
 
 ```bash
-# Clone o repositório
 git clone https://github.com/Luisr-nunes/CanvasAgil.git
-cd CanvasAgil
-
-# Instale as dependências
+cd "CanvasAgil/Canvas Ágil"
 npm install
-
-# Inicie o servidor de desenvolvimento (abre na porta 3000)
-npm run dev
+npm run dev      # http://localhost:3000
 ```
 
----
+Para gerar a versão de produção: `npm run build` (saída em `build/`).
 
-## Atribuições
+## Créditos
 
-- Componentes de UI: **shadcn/ui** — licença MIT
-- Imagens: **Unsplash** — licença Unsplash
-
----
+- Componentes de [shadcn/ui](https://ui.shadcn.com/), licença MIT.
+- Fotos do [Unsplash](https://unsplash.com), [licença Unsplash](https://unsplash.com/license).
 
 ## Autor
 
-<div align="center">
+Luís Nunes — [GitHub](https://github.com/Luisr-nunes) · [LinkedIn](https://www.linkedin.com/in/luis-nunes-dev/)
 
-**Luis Nunes**
-Estudante de ADS — CESAR School
-
-[![GitHub](https://img.shields.io/badge/GitHub-Luisr--nunes-181717?style=flat-square&logo=github)](https://github.com/Luisr-nunes)
-
-</div>
-
----
-
-<div align="center">
-
-*⚡ Do Figma ao código — base pronta para o próximo projeto.*
-
-</div>
+Projeto acadêmico do curso de Análise e Desenvolvimento de Sistemas da Cesar School.

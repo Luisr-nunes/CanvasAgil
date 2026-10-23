@@ -1,5 +1,8 @@
 # Canvas Ágil
 
+<!-- badges -->
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white) ![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white) ![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-000000?style=flat-square&logo=shadcnui&logoColor=white) ![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square&logo=figma&logoColor=white)
+
 [Read in English](README.en.md)
 
 Protótipo de app mobile para professores montarem o planejamento de uma aula em cerca de 10 minutos, com um canvas estruturado e sugestões de um copiloto de IA. Front-end exportado do Figma Make em React e TypeScript.
